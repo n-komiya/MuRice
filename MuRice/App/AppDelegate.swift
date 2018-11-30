@@ -13,10 +13,19 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var router: Router!
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+
         // Override point for customization after application launch.
         FirebaseApp.configure()
+
+        router = Router()
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = router.root
+        window?.makeKeyAndVisible()
+
         return true
     }
 

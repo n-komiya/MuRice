@@ -6,7 +6,17 @@ target 'MuRice' do
   use_frameworks!
 
   # Pods for MuRice
+  pod 'R.swift'
+
+  pod 'Nuke'
+
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+
+  pod 'SnapKit'
+
+  pod 'RxCocoa'
+  pod 'RxSwift'
 
   target 'MuRiceTests' do
     inherit! :search_paths

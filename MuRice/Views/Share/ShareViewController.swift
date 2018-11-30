@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ShareViewController.swift
 //  MuRice
 //
 //  Created by 古宮 伸久 on 2018/11/30.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ShareViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = .red
+
     }
-
-
 }
-
