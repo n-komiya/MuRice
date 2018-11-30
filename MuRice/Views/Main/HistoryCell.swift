@@ -7,14 +7,10 @@
 //
 
 import UIKit
-import Nuke
+import SnapKit
 
 class HistoryCell: UITableViewCell {
 
-    var itemImage: UIImageView = {
-        let image = UIImageView()
-        return image
-    }()
     var itemName: UILabel = {
         let label = UILabel()
         return label
@@ -31,10 +27,12 @@ class HistoryCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        contentView.addSubview(itemImage)
-        contentView.addSubview(itemName)
-        contentView.addSubview(historyDate)
-        contentView.addSubview(itemPrice)
+        let stack = UIStackView(arrangedSubviews: [historyDate, itemName, itemPrice])
+        stack.axis = .vertical
+        contentView.addSubview(stack)
+        stack.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {

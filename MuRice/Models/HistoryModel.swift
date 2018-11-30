@@ -16,6 +16,15 @@ struct HistoryModel {
     let shop: String
 
     init?(document: DocumentSnapshot) {
-        return nil
+        guard let data = document.data(),
+            let date = (data["date"] as? Timestamp)?.dateValue(),
+            let price = data["price"] as? Int else {
+            return nil
+        }
+        id = document.documentID
+        self.date = date
+        self.price = price
+        self.item = id
+        self.shop = ""
     }
 }

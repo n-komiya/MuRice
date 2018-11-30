@@ -14,15 +14,4 @@ final class Router {
     init() {
         self.root = RootViewController()
     }
-
-    enum Screen {
-        case main
-    }
-
-    func route(to screen: Screen, from viewController: UIViewController) {
-        switch screen {
-        case .main:
-            root.showMain()
-        }
-    }
 }

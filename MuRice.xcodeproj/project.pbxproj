@@ -20,6 +20,7 @@
 		1716217521B102BE001DDE3D /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716217421B102BE001DDE3D /* HistoryCell.swift */; };
 		1716217A21B10328001DDE3D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716217921B10328001DDE3D /* Common.swift */; };
 		1716217E21B10EB8001DDE3D /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716217D21B10EB8001DDE3D /* HistoryViewModel.swift */; };
+		1716218021B12F37001DDE3D /* Tab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1716217F21B12F37001DDE3D /* Tab.storyboard */; };
 		17A57B2E21B0DC6100DFC779 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17A57B2D21B0DC6100DFC779 /* GoogleService-Info.plist */; };
 		17AEDAFB21B0DA7B003E98C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AEDAFA21B0DA7B003E98C3 /* AppDelegate.swift */; };
 		17AEDB0221B0DA7D003E98C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17AEDB0121B0DA7D003E98C3 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		1716217421B102BE001DDE3D /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		1716217921B10328001DDE3D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		1716217D21B10EB8001DDE3D /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		1716217F21B12F37001DDE3D /* Tab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tab.storyboard; sourceTree = "<group>"; };
 		17A57B2D21B0DC6100DFC779 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		17AEDAF721B0DA7B003E98C3 /* MuRice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuRice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AEDAFA21B0DA7B003E98C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		1716215F21B0F274001DDE3D /* Tab */ = {
 			isa = PBXGroup;
 			children = (
+				1716217F21B12F37001DDE3D /* Tab.storyboard */,
 				1716216021B0F292001DDE3D /* MenuTabBarController.swift */,
 			);
 			path = Tab;
@@ -324,6 +327,7 @@
 				17AEDB0521B0DA7D003E98C3 /* LaunchScreen.storyboard in Resources */,
 				17A57B2E21B0DC6100DFC779 /* GoogleService-Info.plist in Resources */,
 				17AEDB0221B0DA7D003E98C3 /* Assets.xcassets in Resources */,
+				1716218021B12F37001DDE3D /* Tab.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

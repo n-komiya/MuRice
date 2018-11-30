@@ -7,30 +7,23 @@
 //
 
 import UIKit
-import SnapKit
 import RxCocoa
 import RxSwift
 
 class MainViewController: UIViewController {
-    let bag = DisposeBag()
+    @IBOutlet weak var tableView: UITableView!
 
-    private lazy var tableView: UITableView = {
-        let table = UITableView()
-        return table
-    }()
+    let bag = DisposeBag()
 
     private lazy var viewModel: HistoryViewModel = {
         let viewModel = HistoryViewModel()
+        viewModel.addListener()
         return viewModel
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints{
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
-        }
+        tableView.register(cellType: HistoryCell.self)
 
         viewModel.entry.bind(to: tableView.rx.items(cellIdentifier: HistoryCell.className, cellType: HistoryCell.self)) { row, element, cell in
             cell.configure(element)

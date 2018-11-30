@@ -9,5 +9,11 @@
 import FirebaseFirestore
 
 struct DataStore {
-    static let db = Firestore.firestore()
+    static let db: Firestore = {
+        let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+        return db
+    }()
 }

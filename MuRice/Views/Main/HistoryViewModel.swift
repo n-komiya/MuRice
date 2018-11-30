@@ -11,9 +11,19 @@ import RxCocoa
 import RxSwift
 
 struct HistoryViewModel {
+    let bag = DisposeBag()
 
-    var entry: Observable<[HistoryModel]> {
-        return .just([])
+    let entry = BehaviorRelay<[HistoryModel]>(value: [])
+
+    func addListener() {
+        DataStore.db
+            .collection("history")
+            .order(by: "date", descending: true)
+            .addSnapshotListener { (snapshot, e) in
+                if let docs = snapshot?.documents
+                    .compactMap(HistoryModel.init) {
+                    self.entry.accept(docs)
+                }
+        }
     }
-
 }
