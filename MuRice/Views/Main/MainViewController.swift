@@ -23,10 +23,10 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(cellType: HistoryCell.self)
 
-        viewModel.entry.bind(to: tableView.rx.items(cellIdentifier: HistoryCell.className, cellType: HistoryCell.self)) { row, element, cell in
-            cell.configure(element)
+        viewModel.entry.bind(to: tableView.rx.items(cellIdentifier: R.reuseIdentifier.history.identifier)) { row, element, cell in
+            let cell = cell as? HistoryCell
+            cell?.configure(element)
         }.disposed(by: bag)
     }
 }

@@ -150,6 +150,12 @@
                                                 <constraint firstItem="onc-M3-2Vh" firstAttribute="top" secondItem="cfg-2V-s9L" secondAttribute="top" constant="8" id="gp1-OX-bP0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="info" destination="DR0-kA-0Sd" id="jRV-BU-14a"/>
+                                            <outlet property="item" destination="Bbt-9C-a6C" id="NSR-ea-N6Y"/>
+                                            <outlet property="price" destination="cdL-bu-rI4" id="bFn-9I-cPU"/>
+                                            <outlet property="shop" destination="LUl-1L-M7c" id="8jy-HO-BPd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
